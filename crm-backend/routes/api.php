@@ -23,6 +23,4 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('/contacts',[ContactController::class,'index']);
     Route::post('/contacts',[ContactController::class,'store'])->middleware('permission:create contact');
     Route::delete('/contacts/{id}',[ContactController::class,'destroy'])->middleware('permission:delete contact');
-
-
 });
